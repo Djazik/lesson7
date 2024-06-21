@@ -1,0 +1,60 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: #0006;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: overlay .5s forwards;
+
+}
+
+
+@keyframes overlay {
+    to {
+        opacity: 1;
+    }
+}
+
+.model {
+    width: 500px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%) scale(.8);
+    opacity: 0;
+    padding: 30px;
+    border-radius: 24px;
+    max-height: 80vh;
+    overflow: auto;
+    animation: model .5s forwards;
+}
+
+@keyframes model {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 1100px){
+    .model::-webkit-scrollbar {
+        width: 6px;
+    }
+    .model::-webkit-scrollbar {
+        background-color: #ddd;
+        border-radius: 50px;
+    }
+}
+
+.model input,
+.model button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    margin-top: 16px;
+}
